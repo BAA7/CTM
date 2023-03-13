@@ -10,12 +10,12 @@ void completeTask()
 void signOut()
 }
 
-interface IChief{
+class Chief{
 User[] junior
 void splitTask(Task task)
 }
 
-interface IAdmin{
+class Admin{
 void createUser()
 void editUser(User user)
 void deleteUser(User user)
@@ -31,4 +31,7 @@ class Qualification{
 int code
 string name
 }
+
+User <|-- Chief
+User <|-- Admin
 @enduml
