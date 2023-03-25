@@ -1,0 +1,37 @@
+@startuml
+class User{
+string name
+string eMail
+string password
+int[] qualificationCodes
+string[] languagesKnown
+User chief
+void completeTask()
+void signOut()
+}
+
+class Chief{
+User[] junior
+void splitTask(Task task)
+}
+
+class Admin{
+void createUser()
+void editUser(User user)
+void deleteUser(User user)
+}
+
+class Task{
+int[] qualificationsRequired
+string languageRequired
+User performer
+}
+
+class Qualification{
+int code
+string name
+}
+
+User <|-- Chief
+User <|-- Admin
+@enduml
