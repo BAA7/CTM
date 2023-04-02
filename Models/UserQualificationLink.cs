@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CTM.Models
 {
-    public class Qualification
+    public class UserQualificationLink
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string name { get; set; }
-        public string description { get; set; }
+        public int userId { get; set; }
+        [Required]
+        public int qualificationId { get; set; }
     }
 }

@@ -381,3 +381,5 @@ C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.CShar
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\andre\source\repos\CTM\obj\Debug\net6.0\CTM.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Humanizer.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
