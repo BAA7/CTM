@@ -35,6 +35,13 @@ header {
   color: #fff;
   cursor: pointer;
 }
+.users button{
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
 
 .login button {
   background: none;
