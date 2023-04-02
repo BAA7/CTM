@@ -5,7 +5,7 @@
 }
 <h1>Users list</h1>
 
-<table class="table table-bordered table-striped" style="width:70%">
+<table class="table table-bordered table-striped" style="width:100%">
     <thead>
         <tr>
             <th>
@@ -19,6 +19,9 @@
             </th>
             <th>
                 Qualifications
+            </th>
+            <th>
+                Languages known
             </th>
         </tr>
     </thead>
@@ -37,6 +40,9 @@
             </td>
             <td>
                 @Model.Qualifications[i]
+            </td>
+            <td>
+                @Model.Languages[i]
             </td>
         </tr>
             }

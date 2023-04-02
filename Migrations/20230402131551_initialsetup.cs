@@ -8,7 +8,7 @@ namespace CTM.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            /*migrationBuilder.CreateTable(
+            migrationBuilder.CreateTable(
                 name: "Languages",
                 columns: table => new
                 {
@@ -45,7 +45,7 @@ namespace CTM.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tasks", x => x.Id);
-                });*/
+                });
 
             migrationBuilder.CreateTable(
                 name: "UserLanguageLinks",
@@ -75,7 +75,7 @@ namespace CTM.Migrations
                     table.PrimaryKey("PK_UserQualificationLinks", x => x.Id);
                 });
 
-            /*migrationBuilder.CreateTable(
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -88,7 +88,7 @@ namespace CTM.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
-                });*/
+                });
 
         }
 
