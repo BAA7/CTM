@@ -24,7 +24,6 @@ C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.IdentityModel.Protoco
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.Runtime.Caching.dll
@@ -59,3 +58,17 @@ C:\Users\andre\source\repos\CTM\obj\Debug\net6.0\CTM.dll
 C:\Users\andre\source\repos\CTM\obj\Debug\net6.0\ref\CTM.dll
 C:\Users\andre\source\repos\CTM\obj\Debug\net6.0\CTM.pdb
 C:\Users\andre\source\repos\CTM\obj\Debug\net6.0\CTM.genruntimeconfig.cache
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\andre\source\repos\CTM\bin\Debug\net6.0\System.Memory.Data.dll
