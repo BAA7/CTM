@@ -13,6 +13,8 @@ namespace CTM.Data
         public DbSet<Models.Task> Tasks { get; set; } = null!;
         public DbSet<Qualification> Qualifications { get; set; } = null!;
         public DbSet<Language> Languages { get; set; } = null!;
+        public DbSet<UserQualificationLink> UserQualificationLinks { get; set; } = null!;
+        public DbSet<UserLanguageLink> UserLanguageLinks { get; set; } = null!;
 
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options)
         {

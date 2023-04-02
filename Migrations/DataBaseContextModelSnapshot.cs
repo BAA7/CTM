@@ -182,7 +182,7 @@ namespace CTM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserLanguageLink");
+                    b.ToTable("UserLanguageLinks");
 
                     b.HasData(
                         new
@@ -239,7 +239,7 @@ namespace CTM.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserQualificationLink");
+                    b.ToTable("UserQualificationLinks");
 
                     b.HasData(
                         new
