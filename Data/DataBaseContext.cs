@@ -4,10 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CTM.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CTM.Data
 {
-    public class DataBaseContext : DbContext
+    public class DataBaseContext : IdentityDbContext
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Models.Task> Tasks { get; set; } = null!;

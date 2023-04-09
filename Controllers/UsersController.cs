@@ -55,7 +55,7 @@ namespace CTM.Controllers
                         }
                     }
                 }
-                dbLists.Qualifications.Add(String.Join(", ",qualificationsList));
+                dbLists.Qualifications.Add(String.Join("; ",qualificationsList));
                 dbLists.Languages.Add(String.Join(", ", languagesList));
             }
             IEnumerable<User> objList = _db.Users;
