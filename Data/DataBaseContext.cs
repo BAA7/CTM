@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CTM.Data
 {
-    public class DataBaseContext : IdentityDbContext
+    public class DataBaseContext : IdentityDbContext<User>
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Models.Task> Tasks { get; set; } = null!;
