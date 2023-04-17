@@ -11,9 +11,9 @@ namespace CTM.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        string name { get; set; }
-        int[] qualificationsRequired { get; set; }
-        string languageRequired { get; set; }
-        int deadline { get; set; }
+        public string name { get; set; }
+        public int languageRequiredId { get; set; }
+        public string performerId { get; set; }
+        public DateTime deadline { get; set; }
     }
 }

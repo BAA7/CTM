@@ -12,6 +12,8 @@ using CTM.Models;
 using CTM.Data;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CTM
 {
@@ -31,6 +33,10 @@ namespace CTM
             services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")
                 ));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddSession();
+            //MvcOptions.EnableEndpointRouting = false;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,9 +57,8 @@ namespace CTM
 
             app.UseRouting();
 
-            app.UseAuthentication();
-
-            app.UseAuthorization();
+            app.UseSession();
+            //app.UseMvcWithDefaultRoute();
 
             app.UseEndpoints(endpoints =>
             {

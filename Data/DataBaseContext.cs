@@ -4,11 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using CTM.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace CTM.Data
 {
-    public class DataBaseContext : IdentityDbContext<User>
+    public class DataBaseContext : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
         public DbSet<Models.Task> Tasks { get; set; } = null!;
@@ -16,7 +15,7 @@ namespace CTM.Data
         public DbSet<Language> Languages { get; set; } = null!;
         public DbSet<UserQualificationLink> UserQualificationLinks { get; set; } = null!;
         public DbSet<UserLanguageLink> UserLanguageLinks { get; set; } = null!;
-
+        public DbSet<TaskQualificationLink> TaskQualificationLinks { get; set; } = null!;
         public DataBaseContext(DbContextOptions<DataBaseContext> options) : base(options)
         {
             Database.EnsureCreated();
@@ -24,6 +23,9 @@ namespace CTM.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) // DB filling on creating
         {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.HasDefaultSchema("dbo");
+            modelBuilder.Entity<User>().Property(p => p.Id).ValueGeneratedOnAdd();
             modelBuilder.Entity<User>().HasData(
                 new User
                 {
@@ -31,8 +33,6 @@ namespace CTM.Data
                     name = "Иванов Иван Иванович",
                     eMail = "ivanovii@mail.ru",
                     password = "ivanovPassword",
-                    //qualificationCodes = new List<int> { 0, 1, 2 },
-                    //languagesKnown = new List<string> { "C", "C++" } 
                 },
                 new User
                 {
@@ -40,8 +40,6 @@ namespace CTM.Data
                     name = "Петров Петр Петрович",
                     eMail = "petrovpp@mail.ru",
                     password = "petrovPassword",
-                    //qualificationCodes = new List<int> { 0, 1 },
-                    //languagesKnown = new List<string> { "C", "C#" }
                 },
                 new User
                 {
@@ -49,8 +47,16 @@ namespace CTM.Data
                     name = "Максимов Максим Максимович",
                     eMail = "maksimovmm@mail.ru",
                     password = "maksimovPassword",
-                    //qualificationCodes = new List<int> { 0, 2 },
-                    //languagesKnown = new List<string> { "Java", "Python" }
+                }
+            );
+            modelBuilder.Entity<Models.Task>().HasData(
+                new Models.Task
+                {
+                    Id = 1,
+                    name = "Тестовое задание",
+                    languageRequiredId = 4,
+                    deadline = new DateTime(2025, 1, 1, 8, 0, 0),
+                    performerId="2"
                 }
             );
             modelBuilder.Entity<Qualification>().HasData(
@@ -104,7 +110,7 @@ namespace CTM.Data
                 new UserQualificationLink
                 {
                     Id = 1,
-                    userId=1,
+                    userId= 1,
                     qualificationId=1
                 },
                 new UserQualificationLink
@@ -148,7 +154,7 @@ namespace CTM.Data
                 new UserLanguageLink
                 {
                     Id=1,
-                    userId=1,
+                    userId= 1,
                     languageId=1
                 },
                 new UserLanguageLink
@@ -180,6 +186,14 @@ namespace CTM.Data
                     Id = 6,
                     userId = 3,
                     languageId = 5
+                }
+                );
+            modelBuilder.Entity<TaskQualificationLink>().HasData(
+                new TaskQualificationLink
+                {
+                    Id = 1,
+                    taskId = 1,
+                    qualificationId = 1
                 }
                 );
         }

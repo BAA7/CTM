@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj": {}
+    "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj": {
+    "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj",
         "projectName": "CTM",
-        "projectPath": "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj",
+        "projectPath": "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\Source\\Repos\\CTM\\obj\\",
+        "outputPath": "C:\\Users\\andre\\source\\repos\\CTM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,19 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.15, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[6.0.15, )"
             },

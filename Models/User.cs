@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CTM.Models
 {
-    public class User : IdentityUser
+    public class User
     {
         [Key]
         public int Id { get; set; }
@@ -17,6 +17,8 @@ namespace CTM.Models
         public string eMail { get; set; }
         [Required]
         public string password { get; set; }
+        //[Required]
+        //public string chiefId { get; set; }
         //public List<int> qualificationCodes { get; set; }
         //public List<string> languagesKnown { get; set; }
     }
