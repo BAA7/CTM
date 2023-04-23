@@ -1,8 +1,39 @@
-﻿@{
+﻿@model CTM.Models.User
+
+@{
     ViewData["Title"] = "CTM - Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<main>
+<h1>Login</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="eMail" class="control-label"></label>
+                <input asp-for="eMail" class="form-control" />
+                <span asp-validation-for="eMail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<!--<main>
 
     <form action="/login" method="POST">
         <label for="username">Имя пользователя:</label>
@@ -12,9 +43,5 @@
         <input type="password" id="password" name="password" required><br><br>
 
         <button type="submit">Войти</button>
-        <button onclick="window.location.href='/Users/Register'">register test</button>
-        <button onclick="window.location.href='/Users/Login'">login test</button>
-        <button onclick="window.location.href='/Users/LoggedIn'">logged in test</button>
     </form>
-</main>
-
+</main>-->

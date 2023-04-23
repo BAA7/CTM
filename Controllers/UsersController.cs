@@ -86,42 +86,52 @@ namespace CTM.Controllers
             return View();
         }
 
-        public ActionResult Login()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Login(User user)
-        {
-            using (DataBaseContext db = _db)
-            {
-                var usr = db.Users.SingleOrDefault(u => user.eMail == u.eMail && user.password == u.password);
-                if (usr != null)
-                {
-                    HttpContext.Session.SetString("Id", usr.Id.ToString());
-                    HttpContext.Session.SetString("name", usr.name.ToString());
-                    //Session["Id"] = usr.Id.ToString();
-                    //Session["name"] = usr.name.ToString();
-                    return RedirectToAction("LoggedIn");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Email and/or password is incorrect.");
-                }
-            }
-            return View();
-        }
-
-        public ActionResult LoggedIn()
+        public ActionResult Profile()
         {
             if (HttpContext.Session.GetString("Id") != null)
             {
-                return View("LoggedIn",HttpContext.Session.GetString("name"));
+                dynamic userInfo = new ExpandoObject();
+                //userInfo.User = HttpContext.Session;
+                userInfo.Id = HttpContext.Session.GetString("Id");
+                userInfo.Name = HttpContext.Session.GetString("name");
+                userInfo.Qualifications = new List<string>();
+                List<string> qualificationsList = new List<string>();
+                foreach(var qualificationLink in _db.UserQualificationLinks)
+                {
+                    if (qualificationLink.userId.ToString() == userInfo.Id)
+                    {
+                        foreach(var qualification in _db.Qualifications)
+                        {
+                            if (qualification.Id == qualificationLink.qualificationId)
+                            {
+                                userInfo.Qualifications.Add(qualification.name);
+                            }
+                        }
+                    }
+                }
+                List<string> languagesList = new List<string>();
+                foreach(var languageLink in _db.UserLanguageLinks)
+                {
+                    if (languageLink.userId.ToString() == userInfo.Id)
+                    {
+                        foreach(var language in _db.Languages)
+                        {
+                            if (language.Id == languageLink.languageId)
+                            {
+                                languagesList.Add(language.name);
+                            }
+                        }
+                    }
+                }
+                //userInfo.Qualifications = String.Join("; ", qualificationsList);
+                userInfo.Languages = String.Join(", ", languagesList);
+
+                return View("Profile", userInfo);
             }
             else
             {
-                return RedirectToAction("Login");
+                //return HomeController.Index();
+                return View("~/Views/Home/Index.cshtml");
             }
         }
     }

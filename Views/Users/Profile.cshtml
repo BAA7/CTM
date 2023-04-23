@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = Model.Name;
+}
+<h1>@Model.Name</h1>
+<h4>Id: @Model.Id</h4>
+<h4>Qualifications:</h4>
+@foreach(var qualification in Model.Qualifications)
+     {
+        <h4>@qualification</h4>
+     }
+<h4>Languages known: @Model.Languages</h4>

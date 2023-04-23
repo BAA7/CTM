@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -6,12 +8,12 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
-    
-	
+
+
 </head>
 
 
@@ -21,36 +23,39 @@
         <div class="logo">
             <a href="/">CTM</a>
         </div>
-        <div class="users">
-            <button onclick="window.location.href='/Users/Index'">СОТРУДНИКИ</button>
-        </div>
+        @if (HttpContextAccessor.HttpContext.Session.GetString("Id") != null)
+        {
+            <div class="users">
+                <button onclick="window.location.href='/Users/Index'">СОТРУДНИКИ</button>
+            </div>
+        }
         <div class="tasks">
             <button></button>
         </div>
         <div class="login">
-            <button>ВОЙТИ</button>
+            <button onclick="window.location.href='/Users/Profile'">ПРОФИЛЬ</button>
 
 
         </div>
     </header>
-  <!--  <main>
-      
-      <form action="/login" method="POST">
-        <label for="username">Имя пользователя:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Войти</button>
-      </form>
-    </main>-->
+    <!--  <main>
+
+        <form action="/login" method="POST">
+          <label for="username">Имя пользователя:</label>
+          <input type="text" id="username" name="username" required><br><br>
+
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" name="password" required><br><br>
+
+          <button type="submit">Войти</button>
+        </form>
+      </main>-->
 
     <footer>
-      <div class="links">
-        <a href="/Home/About">О НАС</a>
-        <a href="/Home/Contact">КОНТАКТЫ</a>
-      </div>
+        <div class="links">
+            <a href="/Home/About">О НАС</a>
+            <a href="/Home/Contact">КОНТАКТЫ</a>
+        </div>
     </footer>
 
 
