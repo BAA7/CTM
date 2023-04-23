@@ -62,6 +62,14 @@ header {
   text-decoration: none;
 }
 
+.admin-panel {
+    background-color: white;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -85,6 +93,9 @@ footer {
 .links a:last-child {
   margin-right: 0;
 }
+.btn-primary {
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+}
 
 
 
@@ -93,7 +104,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 label {
@@ -149,4 +160,54 @@ input:invalid + span {
 
 input:valid + span {
   display: none;
+}
+
+/*Стиль таблицы профиля*/
+
+
+/* Стили для таблицы профиля */
+#profile-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+#profile-table th,
+#profile-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#profile-table th {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+#profile-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+#profile-table td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
+
+/*стиль для приветсвия*/
+
+/* Minimalist greeting style */
+.minimalist-dlya-privet {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.minimalist-dlya-privet-text {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 50px;
 }
