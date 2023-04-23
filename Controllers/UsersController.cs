@@ -2,20 +2,20 @@
 using CTM.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
-//using System.Web;
-//using System.Web.Mvc;
+
 
 namespace CTM.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly DataBaseContext _db;
+        public readonly DataBaseContext _db;
 
         public UsersController(DataBaseContext db)
         {
@@ -67,21 +67,52 @@ namespace CTM.Controllers
 
         public ActionResult Register()
         {
+            dynamic registerData = new ExpandoObject();
+
+            ViewBag.Qualifications = new List<SelectListItem>();
+            foreach(var qualification in _db.Qualifications)
+            {
+                ViewBag.Qualifications.Add(new SelectListItem() { Text = qualification.name, Value = qualification.Id.ToString() });
+            }
+
+            ViewBag.Languages = new List<SelectListItem>();
+            foreach(var language in _db.Languages)
+            {
+                ViewBag.Languages.Add(new SelectListItem() { Text = language.name, Value = language.Id.ToString() });
+            }
+
+            ViewBag.Users = new List<SelectListItem>();
+            foreach (var user in _db.Users)
+            {
+                ViewBag.Users.Add(new SelectListItem() { Text = user.name, Value = user.Id.ToString() });
+            }
+
             return View();
         }
 
         [HttpPost]
-        public ActionResult Register(User user)
+        public ActionResult Register(UserRegisterModel userModel)
         {
             if (ModelState.IsValid)
             {
                 using(DataBaseContext db=new DataBaseContext(new DbContextOptions<DataBaseContext>()))
                 {
-                    db.Users.Add(user);
+                    //db.Users.Add(user);
+                    //db.SaveChanges();
+                    db.Users.Add(userModel.user);
+                    foreach (var qualification in userModel.qualificationsId)
+                    {
+                        db.UserQualificationLinks.Add(new UserQualificationLink { userId = userModel.user.Id, qualificationId = qualification });
+                    }
+                    foreach (var language in userModel.languagesId)
+                    {
+                        db.UserLanguageLinks.Add(new UserLanguageLink { userId = userModel.user.Id, languageId = language });
+                    }
+                    db.UserChiefLinks.Add(new UserChiefLink { userId = userModel.user.Id, chiefId = userModel.chiefId });
                     db.SaveChanges();
+                    ModelState.Clear();
+                    ViewBag.Message = userModel.user.eMail + " registration successful.";
                 }
-                ModelState.Clear();
-                ViewBag.Message = user.eMail + " registration successful.";
             }
             return View();
         }
@@ -133,6 +164,12 @@ namespace CTM.Controllers
                 //return HomeController.Index();
                 return View("~/Views/Home/Index.cshtml");
             }
+        }
+
+        public ActionResult LogOut()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index","Home");
         }
     }
 }

@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace CTM.Models
 {
-    public class Task
+    public class UserChiefLink
     {
         [Key]
         public int Id { get; set; }
-        [Required]
-        public string name { get; set; }
-        public int languageRequiredId { get; set; }
-        public int performerId { get; set; }
-        public DateTime deadline { get; set; }
+        public int userId { get; set; }
+        public int chiefId { get; set; }
     }
 }

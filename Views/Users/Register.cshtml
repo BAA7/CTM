@@ -1,4 +1,4 @@
-﻿@model CTM.Models.User
+﻿@model CTM.Models.UserRegisterModel
 
 @{
     ViewData["Title"] = "Register";
@@ -14,19 +14,37 @@
         <form asp-action="Register">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="name" class="control-label"></label>
-                <input asp-for="name" class="form-control" />
-                <span asp-validation-for="name" class="text-danger"></span>
+                <label asp-for="user.name" class="control-label">FIO</label>
+                <input asp-for="user.name" class="form-control" />
+                <span asp-validation-for="user.name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="eMail" class="control-label"></label>
-                <input asp-for="eMail" class="form-control" />
-                <span asp-validation-for="eMail" class="text-danger"></span>
+                <label asp-for="user.eMail" class="control-label">E-mail</label>
+                <input asp-for="user.eMail" class="form-control" />
+                <span asp-validation-for="user.eMail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="password" class="control-label"></label>
-                <input asp-for="password" class="form-control" />
-                <span asp-validation-for="password" class="text-danger"></span>
+                <label asp-for="user.password" class="control-label">Password</label>
+                <input asp-for="user.password" class="form-control" />
+                <span asp-validation-for="user.password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="chiefId" class="control-label">Chief</label>
+                <select asp-for="chiefId" asp-items="ViewBag.Users">
+                </select>
+                <span asp-validation-for="chiefId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qualificationsId" class="control-label">Qualifications</label>
+                <select asp-for="qualificationsId" asp-items="ViewBag.Qualifications" multiple>
+                </select>
+                <span asp-validation-for="qualificationsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="languagesId" class="control-label">Languages known</label>
+                <select asp-for="languagesId" asp-items="ViewBag.Languages" multiple>
+                </select>
+                <span asp-validation-for="languagesId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -41,4 +59,15 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+        $(function () {
+            $(".chosen-qualification").chosen();
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $(".chosen-language").chosen();
+        });
+    </script>
 }

@@ -28,10 +28,10 @@
             <div class="users">
                 <button onclick="window.location.href='/Users/Index'">СОТРУДНИКИ</button>
             </div>
+            <div class="tasks">
+                <button onclick="window.location.href='/Home/Tasks'">TASKS</button>
+            </div>
         }
-        <div class="tasks">
-            <button></button>
-        </div>
         <div class="login">
             <button onclick="window.location.href='/Users/Profile'">ПРОФИЛЬ</button>
 
@@ -56,6 +56,12 @@
             <a href="/Home/About">О НАС</a>
             <a href="/Home/Contact">КОНТАКТЫ</a>
         </div>
+        @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
+        {
+            <div class="adminPage">
+                <button onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</button>
+            </div>
+        }
     </footer>
 
 

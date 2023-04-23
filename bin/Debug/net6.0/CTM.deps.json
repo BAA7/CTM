@@ -43,6 +43,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.15",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13",
           "Swashbuckle.AspNetCore": "6.3.0",
+          "bootstrap.chosen": "1.0.0",
           "Microsoft.CSharp.Reference": "6.0.0.0",
           "Microsoft.VisualBasic.Core": "11.0.0.0",
           "Microsoft.VisualBasic": "10.0.0.0",
@@ -339,6 +340,11 @@
           "CTM.dll": {}
         }
       },
+      "bootstrap.chosen/1.0.0": {
+        "dependencies": {
+          "jQuery": "1.6.4"
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -347,6 +353,7 @@
           }
         }
       },
+      "jQuery/1.6.4": {},
       "MessagePack/2.1.152": {
         "dependencies": {
           "MessagePack.Annotations": "2.1.152",
@@ -4781,12 +4788,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap.chosen/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gq1QwZ53xlx1mKUBbSP9+o0AVsL61g6RQ5Jia/ghXb4CurA1aJUZtoOnO77fZrSsuRNh0J7I5ct5qTu2otQUmg==",
+      "path": "bootstrap.chosen/1.0.0",
+      "hashPath": "bootstrap.chosen.1.0.0.nupkg.sha512"
+    },
     "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
+    "jQuery/1.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8RzoZQFeFYL/cINRXksLWyl8D5TKctZ/2G8hrlOLLM5OgFNI9h3t3l5tB+BBbsBUxaPUageVe0p9ruU5jrFeow==",
+      "path": "jquery/1.6.4",
+      "hashPath": "jquery.1.6.4.nupkg.sha512"
     },
     "MessagePack/2.1.152": {
       "type": "package",

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Dynamic;
 
 namespace CTM.Controllers
 {
@@ -78,9 +79,29 @@ namespace CTM.Controllers
             return View();
         }
 
-        public IActionResult Logout()
+        public ActionResult Tasks()
         {
-            return View();
+            if (HttpContext.Session.GetString("Id") != null)
+            {
+                dynamic tasksData = new ExpandoObject();
+                List<Models.Task> tasks = _db.Tasks.ToList();
+                List<User> performers = new List<User>();
+                foreach(var task in tasks)
+                {
+                    foreach(var user in _db.Users)
+                    {
+                        if (user.Id == task.performerId)
+                        {
+                            performers.Add(user);
+                            break;
+                        }
+                    }
+                }
+                tasksData.Tasks = tasks;
+                tasksData.Performers = performers;
+                return View(tasksData);
+            }
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "b1vJq5Y7v+BU3NvAxLol+NyTEzkpU0qA2rQn4PY5w7qCNty5/OOkWPhLOHfQCFGK8Ita73zIUz0nmEJfXWVbsg==",
+  "dgSpecHash": "z25X6D98et1lXjwKm9Pdz64DidvZw6ViBi70YEaMU5XsHrS04xnxJmmkV2sUbCWiZZe0XPKl25As4LQslO8wbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\andre\\.nuget\\packages\\bootstrap.chosen\\1.0.0\\bootstrap.chosen.1.0.0.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\andre\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
