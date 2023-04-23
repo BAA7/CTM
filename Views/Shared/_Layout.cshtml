@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
 
 </head>
@@ -59,7 +60,7 @@
         @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
         {
             <div class="adminPage">
-                <button onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</button>
+                <buttonс id="admin-panel" onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</buttonс>
             </div>
         }
     </footer>
@@ -88,5 +89,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+
 </body>
 </html>

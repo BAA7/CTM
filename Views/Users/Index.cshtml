@@ -52,11 +52,23 @@
 </table>
 @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
 {
-    <button onclick="window.location.href='/Users/Register'">Add new worker</button>
+    <button id="add-worker-btn" onclick="window.location.href='/Users/Register'">Add new worker</button>
 }
 
 
+
 <style>
+
+
+    #add-worker-btn {
+        background: linear-gradient(to right, #7f00ff, #e100ff);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+    }
+
+
     body {
         font-family: Arial, sans-serif;
     }
