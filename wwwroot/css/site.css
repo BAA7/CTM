@@ -62,13 +62,7 @@ header {
   text-decoration: none;
 }
 
-.admin-panel {
-    background-color: white;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-}
+
 
 footer {
   position: absolute;

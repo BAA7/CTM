@@ -30,7 +30,7 @@
                 <button onclick="window.location.href='/Users/Index'">СОТРУДНИКИ</button>
             </div>
             <div class="tasks">
-                <button onclick="window.location.href='/Home/Tasks'">TASKS</button>
+                <button onclick="window.location.href='/Home/Tasks'">ЗАДАЧИ</button>
             </div>
         }
         <div class="login">
@@ -60,12 +60,20 @@
         @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
         {
             <div class="adminPage">
-                <buttonс id="admin-panel" onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</buttonс>
+                <button id="admin-panel" onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</button>
             </div>
         }
     </footer>
-
-
+    <style>
+        #admin-panel {
+            background-color: transparent;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+    </style>
+    
 
 
 

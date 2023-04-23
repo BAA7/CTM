@@ -14,16 +14,16 @@
                 Id
             </th>
             <th>
-                Name
+                Имя
             </th>
             <th>
                 E-mail
             </th>
             <th>
-                Qualifications
+                Квалификация
             </th>
             <th>
-                Languages known
+                Знания языков
             </th>
         </tr>
     </thead>
@@ -52,7 +52,7 @@
 </table>
 @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
 {
-    <button id="add-worker-btn" onclick="window.location.href='/Users/Register'">Add new worker</button>
+    <button id="add-worker-btn" onclick="window.location.href='/Users/Register'">Добавить нового сотрудника</button>
 }
 
 
