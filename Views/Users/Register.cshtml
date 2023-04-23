@@ -5,16 +5,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Register</h1>
+<center><h1>Регистрация</h1></center>
 
-<h4>User</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-6  offset-md-1" style="margin-right: 10px;">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="user.name" class="control-label">FIO</label>
+                <label asp-for="user.name" class="control-label">ФИО</label>
                 <input asp-for="user.name" class="form-control" />
                 <span asp-validation-for="user.name" class="text-danger"></span>
             </div>
@@ -24,38 +23,44 @@
                 <span asp-validation-for="user.eMail" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="user.password" class="control-label">Password</label>
-                <input asp-for="user.password" class="form-control" />
+                <label asp-for="user.password" class="control-label">Пароль</label>
+                <<input asp-for="user.password" class="form-control" />
                 <span asp-validation-for="user.password" class="text-danger"></span>
             </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 offset-md-7" style="margin-right: 10px; margin-top: -260px;">
             <div class="form-group">
-                <label asp-for="chiefId" class="control-label">Chief</label>
+                <label asp-for="chiefId" class="control-label">ФИО</label>
                 <select asp-for="chiefId" asp-items="ViewBag.Users">
                 </select>
                 <span asp-validation-for="chiefId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="qualificationsId" class="control-label">Qualifications</label>
+                <label asp-for="qualificationsId" class="control-label">Квалификация</label>
                 <select asp-for="qualificationsId" asp-items="ViewBag.Qualifications" multiple>
                 </select>
                 <span asp-validation-for="qualificationsId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="languagesId" class="control-label">Languages known</label>
+                <label asp-for="languagesId" class="control-label">Знание языков</label>
                 <select asp-for="languagesId" asp-items="ViewBag.Languages" multiple>
                 </select>
                 <span asp-validation-for="languagesId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+            
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
+<div class="form-group text-center">
+    <input type="submit" value="Create" class="btn btn-primary mb-1" style="margin-left: -4px; margin-top: 70px;" />
 </div>
+
+
+
+
+
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
