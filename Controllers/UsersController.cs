@@ -62,7 +62,11 @@ namespace CTM.Controllers
                 dbLists.Languages.Add(String.Join(", ", languagesList));
             }
             IEnumerable<User> objList = _db.Users;
-            return View(dbLists);
+            if (HttpContext.Session.GetString("Id") != null)
+            {
+                return View(dbLists);
+            }
+            return RedirectToAction("Index","Home");
         }
 
         public ActionResult Register()

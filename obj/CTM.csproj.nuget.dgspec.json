@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj": {}
+    "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj": {
+    "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj",
         "projectName": "CTM",
-        "projectPath": "C:\\Users\\andre\\source\\repos\\CTM\\CTM.csproj",
+        "projectPath": "C:\\Users\\andre\\Source\\Repos\\CTM\\CTM.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\source\\repos\\CTM\\obj\\",
+        "outputPath": "C:\\Users\\andre\\Source\\Repos\\CTM\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",

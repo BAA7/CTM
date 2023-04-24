@@ -39,18 +39,6 @@
 
         </div>
     </header>
-    <!--  <main>
-
-        <form action="/login" method="POST">
-          <label for="username">Имя пользователя:</label>
-          <input type="text" id="username" name="username" required><br><br>
-
-          <label for="password">Пароль:</label>
-          <input type="password" id="password" name="password" required><br><br>
-
-          <button type="submit">Войти</button>
-        </form>
-      </main>-->
 
     <footer>
         <div class="links">
@@ -60,7 +48,7 @@
         @if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
         {
             <div class="adminPage">
-                <button id="admin-panel" onclick="window.location.href='/Users/Admin'">ПАНЕЛЬ АДМИНИСТРАТОРА</button>
+                <button id="admin-panel" onclick="window.location.href='/Admin/Index'">ПАНЕЛЬ АДМИНИСТРАТОРА</button>
             </div>
         }
     </footer>

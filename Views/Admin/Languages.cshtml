@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Admin panel - Languages";
+}
+
+<h1>Qualifications</h1>
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var qualification in Model)
+        {
+            <tr>
+                <td>
+                    @qualification.Id
+                </td>
+                <td>
+                    @qualification.name
+                </td>
+                <td>
+                    <a>Edit</a> <a>Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button>Add new language</button>
+<a href="/Admin/Index">Go back</a>
