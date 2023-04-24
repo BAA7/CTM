@@ -2,8 +2,37 @@
     ViewData["Title"] = "CTM - Admin panel";
 }
 
-<h1>Admin panel</h1>
+<center><h1>Панель администратора</h1></center>
 
-<button onclick="window.location.href='/Admin/Qualifications'">Qualifications</button>
-<button onclick="window.location.href='/Admin/Languages'">Languages</button>
-<a href="/Home/LoggedIn">Exit admin panel</a>
+<button class="btn btn-primary mb-1" style="margin:0 auto; margin-top: 70px" id="quali" onclick="window.location.href='/Admin/Qualifications'">Квалификация</button>
+<button class="btn btn-primary mb-1" style="margin:0 auto; margin-top: 70px" id="langu" onclick="window.location.href='/Admin/Languages'">Языки </button>
+<p></p>
+<center><a id="exit1" href="/Home/LoggedIn">Выйти из панели администратора</a></center>
+
+<style>
+    #quali{
+        background: linear-gradient(to right, #7f00ff, #e100ff);
+        color: white;
+        border: none;
+        padding: 30px 60px;
+        border-radius: 14px;
+        align-items: center;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #langu{
+        background: linear-gradient(to right, #7f00ff, #e100ff);
+        color: white;
+        border: none;
+        padding: 30px 60px;
+        border-radius: 14px;
+        align-items: center;
+        display: flex;
+        
+        justify-content: center;
+    }
+    #exit1{
+
+    }
+</style>
