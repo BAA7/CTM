@@ -1,0 +1,46 @@
+﻿@model CTM.Models.TaskCreateModel
+@using System.Globalization
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "CTM - Tasks - Add";
+}
+
+<h1>Добавить новую задачу</h1>
+
+<form asp-action="Add">
+        <div class="col-sm-12 col-md-6  offset-md-1" style="margin-right: 10px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="task.name" class="control-label">Название задачи</label>
+                <input asp-for="task.name" class="form-control" />
+                <span asp-validation-for="task.name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="qualificationsId" class="control-label">Требуемые квалификации</label>
+                <select asp-for="qualificationsId" asp-items="ViewBag.Qualifications" multiple>
+                </select>
+                <span asp-validation-for="qualificationsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="task.languageRequiredId" class="control-label">Требуемый язык</label>
+                <select asp-for="task.languageRequiredId" asp-items="ViewBag.Languages">
+                </select>
+                <span asp-validation-for="task.languageRequiredId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="task.performerId" class="control-label">Исполнитель</label>
+                <select asp-for="task.performerId" asp-items="ViewBag.Users">
+                </select>
+                <span asp-validation-for="task.performerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="task.deadline" class="control-label">Дедлайн</label>
+                <input asp-for="task.deadline" type="datetime-local" />
+                <span asp-validation-for="task.deadline" class="text-danger"></span>
+            </div>
+        </div>
+    <div class="form-group text-center">
+        <input type="submit" value="Создать" class="btn btn-primary mb-1" style="margin-left: -4px; margin-top: 70px;" />
+    </div>
+</form>

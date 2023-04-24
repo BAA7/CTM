@@ -25,28 +25,34 @@
             <th>
                 Знания языков
             </th>
+            <th>
+                Начальник
+            </th>
         </tr>
     </thead>
     <tbody>
         @for (int i = 0; i < Model.Users.Count; i++)
         {
-            <tr>
-                <td>
-                    @Model.Users[i].Id
-                </td>
-                <td>
-                    @Model.Users[i].name
-                </td>
-                <td>
-                    @Model.Users[i].eMail
-                </td>
-                <td>
-                    @Model.Qualifications[i]
-                </td>
-                <td>
-                    @Model.Languages[i]
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Model.Users[i].Id
+            </td>
+            <td>
+                @Model.Users[i].name
+            </td>
+            <td>
+                @Model.Users[i].eMail
+            </td>
+            <td>
+                @Model.Qualifications[i]
+            </td>
+            <td>
+                @Model.Languages[i]
+            </td>
+            <td>
+                @Model.Chiefs[i]
+            </td>
+        </tr>
         }
     </tbody>
 </table>

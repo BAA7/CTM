@@ -1,0 +1,150 @@
+﻿@model dynamic
+@using System.Globalization
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "CTM - Tasks";
+}
+
+<h1>Мои Задачи</h1>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Задача
+            </th>
+            <th>
+                Исполнитель
+            </th>
+            <th>
+                Дедлайн
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.MyTasks.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Model.MyTasks[i].name
+                </td>
+                <td>
+                    @Model.Me.name
+                </td>
+                <td>
+                    @Model.MyTasks[i].deadline.ToString("g", CultureInfo.GetCultureInfo("de-DE"))
+                </td>
+            </tr>
+        }
+        @if (Model.MyTasks.Count == 0)
+        {
+            <tr>
+                <td>
+                    Здесь
+                </td>
+                <td>
+                    Пока
+                </td>
+                <td>
+                    Пусто
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<h1>Задачи подчиненных</h1>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Задача
+            </th>
+            <th>
+                Исполнитель
+            </th>
+            <th>
+                Дедлайн
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.SubordinatesTasks.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Model.SubordinatesTasks[i].name
+                </td>
+                <td>
+                    @Model.SubordinatePerformers[i].name
+                </td>
+                <td>
+                    @Model.SubordinatesTasks[i].deadline.ToString("g", CultureInfo.GetCultureInfo("de-DE"))
+                </td>
+            </tr>
+        }
+        @if (Model.SubordinatesTasks.Count == 0)
+        {
+            <tr>
+                <td>
+                    Здесь
+                </td>
+                <td>
+                    Пока
+                </td>
+                <td>
+                    Пусто
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@if (HttpContextAccessor.HttpContext.Session.GetString("Id") == "1")
+{
+    <h1>Другие задачи</h1>
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Задача
+                </th>
+                <th>
+                    Исполнитель
+                </th>
+                <th>
+                    Дедлайн
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.OtherTasks.Count; i++)
+            {
+                <tr>
+                    <td>
+                        @Model.OtherTasks[i].name
+                    </td>
+                    <td>
+                        @Model.OtherPerformers[i].name
+                    </td>
+                    <td>
+                        @Model.OtherTasks[i].deadline.ToString("g", CultureInfo.GetCultureInfo("de-DE"))
+                    </td>
+                </tr>
+            }
+            @if (Model.OtherTasks.Count == 0)
+            {
+                <tr>
+                    <td>
+                        Здесь
+                    </td>
+                    <td>
+                        Пока
+                    </td>
+                    <td>
+                        Пусто
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+<button onclick="window.location.href='/Tasks/Add'">Добавить задачу</button>

@@ -28,6 +28,7 @@ namespace CTM.Controllers
             dbLists.Users = _db.Users.ToList();
             dbLists.Qualifications = new List<string>();
             dbLists.Languages = new List<string>();
+            dbLists.Chiefs = new List<string>();
             foreach(var user in _db.Users)
             {
                 List<string> qualificationsList = new List<string>();
@@ -54,6 +55,19 @@ namespace CTM.Controllers
                             if (language.Id == link.languageId)
                             {
                                 languagesList.Add(language.name);
+                            }
+                        }
+                    }
+                }
+                foreach(var link in _db.UserChiefLinks)
+                {
+                    if (link.userId == user.Id)
+                    {
+                        foreach(var chief in _db.Users)
+                        {
+                            if (chief.Id == link.chiefId)
+                            {
+                                dbLists.Chiefs.Add(chief.name);
                             }
                         }
                     }
@@ -99,7 +113,7 @@ namespace CTM.Controllers
         {
             if (ModelState.IsValid)
             {
-                using(DataBaseContext db=new DataBaseContext(new DbContextOptions<DataBaseContext>()))
+                /*using(DataBaseContext db=new DataBaseContext(new DbContextOptions<DataBaseContext>()))
                 {
                     //db.Users.Add(user);
                     //db.SaveChanges();
@@ -116,9 +130,23 @@ namespace CTM.Controllers
                     db.SaveChanges();
                     ModelState.Clear();
                     ViewBag.Message = userModel.user.eMail + " registration successful.";
+                }*/
+                _db.Users.Add(userModel.user);
+                _db.SaveChanges();
+                foreach (var qualification in userModel.qualificationsId)
+                {
+                    _db.UserQualificationLinks.Add(new UserQualificationLink { userId = GetUserId(userModel), qualificationId = qualification });
                 }
+                foreach (var language in userModel.languagesId)
+                {
+                    _db.UserLanguageLinks.Add(new UserLanguageLink { userId = GetUserId(userModel), languageId = language });
+                }
+                _db.UserChiefLinks.Add(new UserChiefLink { userId = GetUserId(userModel), chiefId = userModel.chiefId });
+                _db.SaveChanges();
+                ModelState.Clear();
+                ViewBag.Message = userModel.user.eMail + " registration successful.";
             }
-            return View();
+            return RedirectToAction("Index","Users");
         }
 
         public ActionResult Profile()
@@ -174,6 +202,18 @@ namespace CTM.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index","Home");
+        }
+
+        public int GetUserId(UserRegisterModel userModel)
+        {
+            foreach(var user in _db.Users)
+            {
+                if (user.eMail == userModel.user.eMail)
+                {
+                    return user.Id;
+                }
+            }
+            return 0;
         }
     }
 }

@@ -8,81 +8,89 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CTM
 build_property.RootNamespace = CTM
-build_property.ProjectDir = C:\Users\andre\Source\Repos\CTM\
+build_property.ProjectDir = C:\Users\andre\source\repos\CTM\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\andre\Source\Repos\CTM
+build_property.MSBuildProjectDirectory = C:\Users\andre\source\repos\CTM
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Admin/Index.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Admin/Languages.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Admin/Languages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGFuZ3VhZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Admin/Qualifications.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Admin/Qualifications.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUXVhbGlmaWNhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/About.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/Contact.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/Index.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/LoggedIn.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/LoggedIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dnZWRJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/Privacy.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Home/Tasks.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Home/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Shared/Error.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Shared/_Layout.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Users/Index.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Tasks/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/andre/source/repos/CTM/Views/Tasks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/andre/source/repos/CTM/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Users/Profile.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Users/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/Users/Register.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/Users/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/_ViewImports.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/andre/Source/Repos/CTM/Views/_ViewStart.cshtml]
+[C:/Users/andre/source/repos/CTM/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope =
