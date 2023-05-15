@@ -1,8 +1,11 @@
-﻿@{
+﻿@model dynamic
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
     ViewData["Title"] = "Admin panel - Languages";
 }
 
-<h1>Qualifications</h1>
+<h1>Languages</h1>
 <table style="width:100%">
     <thead>
         <tr>
@@ -15,21 +18,28 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var qualification in Model)
+        @foreach (var language in Model)
         {
             <tr>
                 <td>
-                    @qualification.Id
+                    @language.Id
                 </td>
                 <td>
-                    @qualification.name
+                    @language.name
                 </td>
                 <td>
-                    <a>Edit</a> <a>Delete</a>
+                    <a>Редактировать</a>
+                    <a href="/Admin/RemoveLanguage/@language.Id">Удалить</a>
                 </td>
             </tr>
         }
+
+
     </tbody>
 </table>
-<button>Add new language</button>
+
+<a href="/Admin/LanguageData">Add new Language</a>
+
+<!--<button>Add new language</button>-->
 <a href="/Admin/Index">Go back</a>
+

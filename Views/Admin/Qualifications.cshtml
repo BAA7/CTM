@@ -1,4 +1,7 @@
-﻿@{
+﻿@model dynamic
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@{
     ViewData["Title"] = "Admin panel - Qualifications";
 }
 
@@ -18,25 +21,30 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var qualification in Model)
-            {
-        <tr>
-            <td>
-                @qualification.Id
-            </td>
-            <td>
-                @qualification.name
-            </td>
-            <td>
-                @qualification.description
-            </td>
-            <td>
-                <a>Edit</a> <a>Delete</a>
-            </td>
-        </tr>
-            }
+        @foreach (var qualification in Model)
+        {
+            <tr>
+                <td>
+                    @qualification.Id
+                </td>
+                <td>
+                    @qualification.name
+                </td>
+                <td>
+                    @qualification.description
+                </td>
+                <td>
+                    <a href="/Admin/Qualifications">Редактировать</a>
+                    <a href="/Admin/RemoveQualification/@qualification.Id">Удалить</a>
+
+
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
-<button>Add new qualification</button>
+<a href="/Admin/QualificationData">Add new Qualification</a>
+
 <a href="/Admin/Index">Go back</a>
 

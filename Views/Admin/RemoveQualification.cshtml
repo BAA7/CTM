@@ -1,0 +1,23 @@
+﻿
+@using System.Globalization
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model CTM.Models.Qualification
+
+@{
+    ViewData["Title"] = "RemoveQualification";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h1>
+
+    Вы действильно хотите удалить @Model.name?
+
+</h1>
+<form asp-action="RemoveQualification">
+<div class="form-group text-center">
+    <input type="submit" value="Да" class="btn btn-primary mb-1" style="margin-left: -4px; margin-top: 70px;" />
+</div>
+</form>
+<button  onclick="window.location.href='/Admin/Qualifications'">Нет</button>
