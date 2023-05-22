@@ -50,23 +50,23 @@
   ## Стили непосредственно в файлах html
   ### Views
   ### Папка Admin
-  #### Файл <a href="main/Views/Admin/Index.cshtml" target="_blank"> Index.cshtml
+  #### Файл <a href="Views/Admin/Index.cshtml" target="_blank"> Index.cshtml </a>
   - langu, quali стили для кнопок   
   ### Папка Home
-  #### Файл <a href="Views/Home/About.cshtml" target="_blank"> About.cshtml
+  #### Файл <a href="Views/Home/About.cshtml" target="_blank"> About.cshtml </a>
   - body, go-back, go-back:hover  стили для кнопки "назад";
-  #### Файл <a href="Views/Home/Contact.cshtml" target="_blank"> Contact.cshtml
+  #### Файл <a href="Views/Home/Contact.cshtml" target="_blank"> Contact.cshtml </a>
   - body стиль для ссылки
   -  table, th, td, th, tr:hover  стили для таблицы
   -  go-back, go-back:hover стиль для кнопки "назад"
   ### Папка Shared   
-  #### Файл <a href="Views/Shared/_Layout.cshtml" target="_blank"> _Layout.cshtml 
+  #### Файл <a href="Views/Shared/_Layout.cshtml" target="_blank"> _Layout.cshtml </a>
   - admin-panael стиль для панели администратора
   ### Папка Tasks  
-  #### Файл <a href="Views/Tasks/Index.cshtml" target="_blank"> Index.cshtml
+  #### Файл <a href="Views/Tasks/Index.cshtml" target="_blank"> Index.cshtml </a>
   - add-task стиль для кнопки "добавить задачу"
   ### Папка Users  
-  #### Файл <a href="Views/Users/Index.cshtml" target="_blank"> Index.cshtml
+  #### Файл <a href="Views/Users/Index.cshtml" target="_blank"> Index.cshtml </a>
   - add-worker-btn, body стили для кнопки 
   - table, th td ,tbody, tr:nth-child(even), tbody, tr:nth-child(odd),td:hover стили для таблицы 
 
