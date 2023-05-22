@@ -50,7 +50,7 @@
   ## Стили непосредственно в файлах html
   ### Views
   ### Папка Admin
-  #### Файл Index.cshtml
+  #### Файл <a href="Views/Admin/Index.cshtml" target="_blank"> Index.cshtml
   - langu, quali стили для кнопок   
   ### Папка Home
   #### Файл About.cshtml
