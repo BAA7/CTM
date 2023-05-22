@@ -35,3 +35,38 @@
 Содержит классы, используемые контекстом БД для чтения и записи
 ## Views
 Содержит папки с представлениями. Представления каждой папки управляются контроллером с соответствующим именем с припиской Controller
+## wwwroot
+Содержит папку wwwroot, в котором файл site.css с css кодом для стиля сайта.
+  - body стиль для "тела" сайта
+  - header стиль для "шапки" сайта
+  - footer стиль для "подвала" сайта
+  - logo a, logo a:hover, стиль для логотипа сайта
+  - tasks button, usres button, login button, login button:hover, btn-primary определяют стили для кнопок
+  - links a, links a:last-child определяют стили для ссылок внутри элементов с классом "links"
+  - form, label, input[type="text"], input[type="password"], input[type="text"]:focus, input[type="password"]:focus, button[type="submit"], button[type="submit"]:hover стили определяющие вид формы авторизации
+  - input:invalid, input:invalid + spani, nput:valid + span стили для ошибки при валидции
+  - profile-table, profile-table th,profile-table td, profile-table th, profile-table tr:hover, profile-table td:first-child  стили для таблицы профиля
+  - minimalist-dlya-privet, minimalist-dlya-privet-text стили для оформления приветствия
+  ## Стили непосредственно в файлах html
+  ### Views -> Admin -> index.cshtml
+  -langu, quali стили для кнопок 
+  ### Home
+  #### About.cshtml
+  - body, go-back, go-back:hover  стили для кнопки "назад";
+  #### Contact.cshtml
+  - body стиль для ссылки
+  -  table, th, td, th, tr:hover  стили для таблицы
+  -  go-back, go-back:hover стиль для кнопки "назад"
+  ### Shared 
+  #### _Layout.cshtml 
+  - admin-panael стиль для панели администратора
+  ### Tasks
+  #### Index.cshtml
+  - add-task стиль для кнопки "добавить задачу"
+  ### Users
+  #### Index.cshtml
+  - add-worker-btn, body стили для кнопки 
+  - table, th td ,tbody, tr:nth-child(even), tbody, tr:nth-child(odd),td:hover стили для таблицы 
+
+
+
