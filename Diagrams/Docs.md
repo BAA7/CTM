@@ -48,23 +48,25 @@
   - profile-table, profile-table th,profile-table td, profile-table th, profile-table tr:hover, profile-table td:first-child  стили для таблицы профиля
   - minimalist-dlya-privet, minimalist-dlya-privet-text стили для оформления приветствия
   ## Стили непосредственно в файлах html
-  ### Views -> Admin -> index.cshtml
+  ### Папка Views
+  ### Папка Admin
+  #### Файл Index.cshtml
   -langu, quali стили для кнопок 
-  ### Home
-  #### About.cshtml
+  ### Папка Home
+  #### Файл About.cshtml
   - body, go-back, go-back:hover  стили для кнопки "назад";
-  #### Contact.cshtml
+  #### Файл Contact.cshtml
   - body стиль для ссылки
   -  table, th, td, th, tr:hover  стили для таблицы
   -  go-back, go-back:hover стиль для кнопки "назад"
-  ### Shared 
-  #### _Layout.cshtml 
+  ### Папка Shared 
+  #### Файл _Layout.cshtml 
   - admin-panael стиль для панели администратора
-  ### Tasks
-  #### Index.cshtml
+  ### Папка Tasks
+  #### Файл Index.cshtml
   - add-task стиль для кнопки "добавить задачу"
-  ### Users
-  #### Index.cshtml
+  ### Папка Users
+  #### Файл Index.cshtml
   - add-worker-btn, body стили для кнопки 
   - table, th td ,tbody, tr:nth-child(even), tbody, tr:nth-child(odd),td:hover стили для таблицы 
 
