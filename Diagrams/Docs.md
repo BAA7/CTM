@@ -46,12 +46,12 @@
   - form, label, input[type="text"], input[type="password"], input[type="text"]:focus, input[type="password"]:focus, button[type="submit"], button[type="submit"]:hover стили определяющие вид формы авторизации
   - input:invalid, input:invalid + spani, nput:valid + span стили для ошибки при валидции
   - profile-table, profile-table th,profile-table td, profile-table th, profile-table tr:hover, profile-table td:first-child  стили для таблицы профиля
-  - minimalist-dlya-privet, minimalist-dlya-privet-text стили для оформления приветствия
+  - minimalist-dlya-privet, minimalist-dlya-privet-text стили для оформления приветствия  
   ## Стили непосредственно в файлах html
   ### Папка Views
   ### Папка Admin
   #### Файл Index.cshtml
-  -langu, quali стили для кнопок 
+  -langu, quali стили для кнопок   
   ### Папка Home
   #### Файл About.cshtml
   - body, go-back, go-back:hover  стили для кнопки "назад";
@@ -59,13 +59,13 @@
   - body стиль для ссылки
   -  table, th, td, th, tr:hover  стили для таблицы
   -  go-back, go-back:hover стиль для кнопки "назад"
-  ### Папка Shared 
+  ### Папка Shared   
   #### Файл _Layout.cshtml 
   - admin-panael стиль для панели администратора
-  ### Папка Tasks
+  ### Папка Tasks  
   #### Файл Index.cshtml
   - add-task стиль для кнопки "добавить задачу"
-  ### Папка Users
+  ### Папка Users  
   #### Файл Index.cshtml
   - add-worker-btn, body стили для кнопки 
   - table, th td ,tbody, tr:nth-child(even), tbody, tr:nth-child(odd),td:hover стили для таблицы 
