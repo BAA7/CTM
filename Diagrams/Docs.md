@@ -51,7 +51,7 @@
   ### Views
   ### Папка Admin
   #### Файл Index.cshtml
-  -langu, quali стили для кнопок   
+  - langu, quali стили для кнопок   
   ### Папка Home
   #### Файл About.cshtml
   - body, go-back, go-back:hover  стили для кнопки "назад";
