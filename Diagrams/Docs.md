@@ -53,20 +53,20 @@
   #### Файл <a href="Views/Admin/Index.cshtml" target="_blank"> Index.cshtml
   - langu, quali стили для кнопок   
   ### Папка Home
-  #### Файл About.cshtml
+  #### Файл <a href="Views/Home/About.cshtml" target="_blank"> About.cshtml
   - body, go-back, go-back:hover  стили для кнопки "назад";
-  #### Файл Contact.cshtml
+  #### Файл <a href="Views/Home/Contact.cshtml" target="_blank"> Contact.cshtml
   - body стиль для ссылки
   -  table, th, td, th, tr:hover  стили для таблицы
   -  go-back, go-back:hover стиль для кнопки "назад"
   ### Папка Shared   
-  #### Файл _Layout.cshtml 
+  #### Файл <a href="Views/Shared/_Layout.cshtml" target="_blank"> _Layout.cshtml 
   - admin-panael стиль для панели администратора
   ### Папка Tasks  
-  #### Файл Index.cshtml
+  #### Файл <a href="Views/Tasks/Index.cshtml" target="_blank"> Index.cshtml
   - add-task стиль для кнопки "добавить задачу"
   ### Папка Users  
-  #### Файл Index.cshtml
+  #### Файл <a href="Views/Users/Index.cshtml" target="_blank"> Index.cshtml
   - add-worker-btn, body стили для кнопки 
   - table, th td ,tbody, tr:nth-child(even), tbody, tr:nth-child(odd),td:hover стили для таблицы 
 
