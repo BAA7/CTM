@@ -48,7 +48,7 @@
   - profile-table, profile-table th,profile-table td, profile-table th, profile-table tr:hover, profile-table td:first-child  стили для таблицы профиля
   - minimalist-dlya-privet, minimalist-dlya-privet-text стили для оформления приветствия  
   ## Стили непосредственно в файлах html
-  ### Папка Views
+  ### Views
   ### Папка Admin
   #### Файл Index.cshtml
   -langu, quali стили для кнопок   
